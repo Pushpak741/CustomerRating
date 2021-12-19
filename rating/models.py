@@ -4,9 +4,9 @@ from datetime import datetime
 class countries_info(models.Model):
     list_id=models.CharField(max_length=10)
     Entity_key=models.CharField(max_length=10)
-        def __str__(self):
+    def __str__(self):
             return "%s " % (self.Entity_key)
-            
+
 class customer_info(models.Model):
     customer_key=models.CharField(max_length=100)
     residential_country_cd=models.ForeignKey('countries_info',null=True,on_delete=models.CASCADE)
